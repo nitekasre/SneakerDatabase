@@ -1,0 +1,71 @@
+﻿@model Assignment12_1.Models.Product
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<center><h1>Details</h1></center>
+
+
+    <div class="float-container">
+
+  <div class="float-child">
+    <div class=""> 
+                @if(Model.ImgName !=" ")
+            {
+                <center><img src="~/images/@Model.ImgName" alt="@Model.ImgName" height="300">
+                 <p><a asp-action="Index">Back to Shoe Inventory</a> </p>  
+                </center>
+                
+            }
+        
+    </div>
+  </div>
+  
+  <div class="float-child">
+    <div class=""> 
+            <dl class="align-middle">
+
+    <dt>
+            @Html.DisplayNameFor(model=>model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model=>model.Id)
+        </dd>
+                <dt>
+            @Html.DisplayNameFor(model=>model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model=>model.Name)
+        </dd>
+         <dt>
+            @Html.DisplayNameFor(model=>model.Style)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model=>model.Style)
+        </dd>
+                <dt>
+            @Html.DisplayNameFor(model=>model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model=>model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model=>model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model=>model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model=>model.Stock)
+        
+        <dd>
+            @Html.DisplayFor(model=>model.Stock)
+        </dd>
+        </dt>
+    </dl>
+
+    </div>
+  </div>
+  
+</div>
